@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load testapp_tags %}
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Document</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'mytheme.css' %}">
+    </head>
+    <body>
+        <p>{% today %} </p>
+        {% block menu %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+        <div id="footer">
+            <p>this is not a valid page these contents are just for example sake you can't edit thesse
+                content so dont try to erase them. today INDIA is leading country in the world.</p>
+        </div>
+    </body>
+</html>

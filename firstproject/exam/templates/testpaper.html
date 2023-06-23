@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Testpaper of BCA Exam 2023</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        .que-div{
+            border:1px solid red;
+        }
+    </style>
+    <body>
+        <div class="que-div">
+            <div class="que">
+                {{que}}
+            </div>
+            <div class="que-options">
+                {% for option in options %}
+                <div><input type="radio" name="answer" id="">{{option | capfirst}}</div>
+                {% endfor %}
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <div>
+                {{options | quotes}}
+            </div>
+        </div>
+    </body>
+</html>
